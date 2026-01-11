@@ -1,0 +1,86 @@
+/******* Header *******/
+body{
+    text-decoration: none;
+}
+
+div.header {
+    font-family: Arial, sans-serif;
+    margin-top: 0;
+    padding: 10px;
+    background-color: #08164a;
+    border: solid #333;
+}
+
+div.header a {
+    margin: 0 15px;
+    margin-left: 15px;
+    padding: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+div.header a:hover {
+    color: #333;
+}
+
+/******* Main Content ********/
+div.main-content {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    margin-bottom: 20px;
+    padding: 20px; ;
+    background-color: #e2e2e2;
+    border: solid #ccc;
+}
+
+div.main-content h1 {
+    color: #08164a;
+    text-align: center;
+}
+
+div.main-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333;
+}
+
+div.page1{
+    margin-top: 20px;
+    padding: 20px;
+}
+
+div.page1, div.page2, div.page3, div.page4 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e2e2e2;
+}
+
+div.page1 a, div.page2 a, div.page3 a, div.page4 a {
+    text-decoration: none;
+    color: #ff9900;
+    font-weight: bold;
+}
+
+div.page1 h2, div.page2 h2, div.page3 h2, div.page4 h2 {
+    color: #08164a;
+}
+
+div.page1 p, div.page2 p, div.page3 p, div.page4 p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+/******* Footer *******/
+div.footer {
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #08164a;
+    border: solid #333;
+    text-align: center;
+    color: #ffffff;
+}
