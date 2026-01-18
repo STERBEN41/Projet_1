@@ -11,11 +11,11 @@
 
     <!-- Header Section -->
     <div class="header">
-        <a href="index.html"> Acceuil </a>
-        <a href="Exercice_1.html"> Programme Panlidrome </a>
-        <a href="Exercice_2.html"> Programme Multiple </a>
-        <a href="Exercice_3.html"> Programme Tirage </a>
-        <a href="Exercice_4.html"> Programme Compteur </a>
+           <a href="index.html"> Acceuil </a>
+        <a href="Exercice_1.php"> Programme Panlidrome </a>
+        <a href="Exercice_2.php"> Programme Multiple </a>
+        <a href="Exercice_3.php"> Programme Tirage </a>
+        <a href="Exercice_4.php"> Programme Compteur </a>
     </div>
 
     <!-- Main Content Section -->
