@@ -12,10 +12,11 @@
     <!-- Header Section -->
     <div class="header">
         <a href="index.html"> Acceuil </a>
-        <a href="Exercice_1.php"> Programme Panlidrome </a>
         <a href="Exercice_2.php"> Programme Multiple </a>
         <a href="Exercice_3.php"> Programme Tirage </a>
         <a href="Exercice_4.php"> Programme Compteur </a>
+        <a href="Exercice_5.php"> Programme PPCM </a>
+        <a href="Exercice_6.php"> Programme Cercle</a>
     </div>
     
     <!-- Main Content Section -->
@@ -48,6 +49,13 @@
         }
     }
     ?>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        
+        <p>&copy; 2026 My Project. All rights reserved.</p>
+
+    </div>
 
 </body>
 </html>
