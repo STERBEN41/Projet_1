@@ -5,14 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css"> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <title>Acceuil</title>
+    <title>Accueil</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </head>
 <body>
 
     <!-- Header Section -->
     <div class="header">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">Voir Exos</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Exercice_1.php">Programme Panlidrome </a></li>
+                <li><a class="dropdown-item" href="Exercice_2.php">Programme Multiple</a></li>
+                <li><a class="dropdown-item" href="Exercice_3.php">Programme Tirage</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="Exercice_4.php">Programme Compteur</a></li>
+                <li><a class="dropdown-item" href="Exercice_5.php">Programme PPCM</a></li>
+                <li><a class="dropdown-item" href="Exercice_6.php">Programme Cercle</a></li>
+                <li><a class="dropdown-item" href="Exercice_7.php">Programme Nombre parfait</a></li>
+                <li><a class="dropdown-item" href="Exercice_8.php">Programme Tableau de notes</a></li>
+                <li><a class="dropdown-item" href="Exercice_9.php">Programme Tableau multidimensionnel</a></li>
+                <li><a class="dropdown-item" href="Exercice_10.php">Programme Fin d'année</a></li>
+                <li><a class="dropdown-item" href="Exercice_11.php">Programme de Formulaire</a></li>
+                <li><a class="dropdown-item" href="Exercice_12.php">Programme de Formulaire 2</a></li>
+                <li><a class="dropdown-item" href="Exercice_13.php">Programme de Formulaire 3</a></li>
+                <li><a class="dropdown-item" href="Exercice_14.php">Programme de Formulaire 4</a></li>
+            </ul>
+        </li>
+    </ul>
+    </div>
+    
+    <!-- <div class="header">
         <a href="index.html"> Acceuil </a>
         <a href="Exercice_1.php"> Programme Panlidrome </a>
         <a href="Exercice_2.php"> Programme Multiple </a>
@@ -20,13 +54,13 @@
         <a href="Exercice_4.php"> Programme Compteur </a>
         <a href="Exercice_5.php"> Programme PPCM </a>
         <a href="Exercice_6.php"> Programme Cercle</a>
-    </div>
+    </div> -->
 
     <!-- Main Content Section -->
     <div class="main-content">
         <h1>Welcome to My Project</h1>
 
-        <p> Ici vous entrez dans ma page principale. Elle servira de épicentre de 
+        <p> Ici vous entrez dans ma page principale. Elle servira de épicentre de
             mon travail et vous permettra de naviger entre les différentes pages.
         </p>
     </div>
@@ -35,21 +69,21 @@
     <div class="page1">
 
         <h2> <a href="Exercice_1.php">Programme Palindrome</a> </h2>
-        <p> Un palindrome est un mot, une phrase, un nombre ou une autre séquence de 
-            caractères qui se lit de la même manière à l'endroit et à l'envers 
-            (ignorer les espaces, la ponctuation et la casse). Par exemple, "radar" et "ressasser". 
+        <p> Un palindrome est un mot, une phrase, un nombre ou une autre séquence de
+            caractères qui se lit de la même manière à l'endroit et à l'envers
+            (ignorer les espaces, la ponctuation et la casse). Par exemple, "radar" et "ressasser".
             Dans cette page vous pourrez tester si un mot est un palindrome ou non.
         </p>
 
     </div>
 
     <!-- Page 2 -->
-    <div class="page2"> 
+    <div class="page2">
 
         <h2> <a href="Exercice_2.php">Programme Multiple</a> </h2>
-        <p> Dans cette page vous pourrez entrer un nombre et le programme vous dira 
+        <p> Dans cette page vous pourrez entrer un nombre et le programme vous dira
             s'il est multiple de 3, de 5, de 7 ou de plusieurs à la fois.
-        </p> 
+        </p>
 
     </div>
 
@@ -67,20 +101,22 @@
 
     <!-- Page 4 -->
     <div class="page4">
-    
+
         <h2> <a href="Exercice_4.php">Programme Compteur</a> </h2>
-        <p> Ce programme permet de compter le nombre de voyelles et de consonnes dans une phrase donnée par l'utilisateur.
-            Dans cette page vous pourrez entrer une phrase et le programme vous dira le nombre de voyelles et de consonnes qu'elle contient.
+        <p> Ce programme permet de compter le nombre de voyelles et de consonnes dans une phrase donnée par
+            l'utilisateur.
+            Dans cette page vous pourrez entrer une phrase et le programme vous dira le nombre de voyelles et de
+            consonnes qu'elle contient.
         </p>
-    
+
     </div>
 
     <!-- Page 5 -->
     <div class="page5">
-    
+
         <h2> <a href="Exercice_5.php">Programme PPCM</a> </h2>
-        <p> Le PPCM (Plus Petit Commun Multiple) de deux nombres est le plus petit nombre 
-            qui est un multiple commun des deux nombres. Par exemple, le PPCM de 4 et 5 est 20, 
+        <p> Le PPCM (Plus Petit Commun Multiple) de deux nombres est le plus petit nombre
+            qui est un multiple commun des deux nombres. Par exemple, le PPCM de 4 et 5 est 20,
             car 20 est le plus petit nombre qui est à la fois un multiple de 4 et de 5.
             Dans cette page vous pourrez entrer deux nombres et le programme vous dira leur PPCM.
         </p>
@@ -89,19 +125,21 @@
 
     <!-- Page 6 -->
     <div class="page6">
-            
+
         <h2> <a href="Exercice_6.php">Programme Cercle</a> </h2>
         <p> Ce programme permet de calculer la circonférence et l'aire d'un cercle en fonction de son rayon.
-            Dans cette page vous pourrez entrer le rayon d'un cercle et le programme vous donnera sa circonférence et son aire.
+            Dans cette page vous pourrez entrer le rayon d'un cercle et le programme vous donnera sa circonférence et
+            son aire.
         </p>
 
     </div>
 
     <!-- Page 7 -->
-     <div class="page7">
+    <div class="page7">
 
         <h1> <a href="Exercice_7.php">Programme Nombre parfait</a> </h1>
-        <p> Un nombre parfait est un nombre entier positif qui est égal à la somme de ses diviseurs propres (excluant lui-même).
+        <p> Un nombre parfait est un nombre entier positif qui est égal à la somme de ses diviseurs propres (excluant
+            lui-même).
             Par exemple, 6 est un nombre parfait car ses diviseurs propres sont 1, 2 et 3, et 1 + 2 + 3 = 6.
             Dans cette page vous pourrez entrer un nombre et le programme vous dira s'il est parfait ou non.
         </p>
@@ -109,11 +147,12 @@
     </div>
 
     <!-- Page 8 -->
-     <div class="page8">
+    <div class="page8">
 
         <h1> <a href="Exercice_8.php">Programme Tableau de notes</a> </h1>
-        <p>Ce programme calcule et affiche la moyenne, la note maximale et minimale d'une serie de note saisi par 
-            l'utilisateur. Dans cette page vous pourrez entrer une série de notes et le programme vous donnera la moyenne, 
+        <p>Ce programme calcule et affiche la moyenne, la note maximale et minimale d'une serie de note saisi par
+            l'utilisateur. Dans cette page vous pourrez entrer une série de notes et le programme vous donnera la
+            moyenne,
             la note maximale et la note minimale.
         </p>
 
@@ -122,9 +161,11 @@
     <!-- Page 9 -->
     <div class="page9">
         <h1> <a href="Exercice_9.php">Programme Tableau multidimensionnel</a> </h1>
-        <p>Ce programme permet de créer et d'afficher un tableau multidimensionnel (matrice) 
-            rempli de nombres aléatoires. Dans cette page vous pourrez spécifier le nombre de lignes et de colonnes, 
-            et le programme générera et affichera la matrice correspondante.
+        <p>Ce programme permet de créer et d'afficher un tableau multidimensionnel (matrice)
+            rempli de nombres aléatoires. Dans cette page vous pourrez spécifier le nombre de lignes et de colonnes,
+            et le programme générera et affichera la matrice correspondante. Dans cette page vous pourrez entrer le
+            nombre de lignes et de colonnes
+            et le programme vous donnera la matrice correspondante.
         </p>
 
     </div>
@@ -144,9 +185,10 @@
     <div class="page11">
 
         <h1> <a href="Exercice_11.php">Programme de Formulaire</a> </h1>
-        <p>un formulaire comprenant un groupe de champs ayant pour titre "Adresse client". 
+        <p>un formulaire comprenant un groupe de champs ayant pour titre "Adresse client".
             Le groupe doit permettre la saisie du nom, du prénom, de l’adresse, de la ville et du code postal.
-            Les données sont ensuite traitées par un fichier PHP séparé récupérant les données et les affichant dans un tableau XHTML.
+            Les données sont ensuite traitées par un fichier PHP séparé récupérant les données et les affichant dans un
+            tableau XHTML.
         </p>
 
     </div>
@@ -155,7 +197,7 @@
     <div class="page12">
 
         <h1> <a href="Exercice_12.php">Programme formulaire 2</a> </h1>
-        <p>un formulaire demandant la saisie d’un prix HT et d’un taux de TVA. Le script affiche 
+        <p>un formulaire demandant la saisie d’un prix HT et d’un taux de TVA. Le script affiche
             le montant de la TVA et le prix TTC dans deux zones de texte créées dynamiquement.
             Le formulaire maintient les données saisies.
         </p>
@@ -166,7 +208,7 @@
     <div class="page13">
 
         <h1> <a href="Exercice_13.php">Programme formulaire 3</a> </h1>
-        <p>un formulaire demandant la saisie d’un prix HT et d’un taux de TVA. 
+        <p>un formulaire demandant la saisie d’un prix HT et d’un taux de TVA.
             Le script affiche le montant de la TVA et le prix TTC dans deux zones de texte créées dynamiquement.
             Le formulaire maintient les données saisies.
         </p>
@@ -177,8 +219,10 @@
     <div class="page14">
 
         <h1> <a href="Exercice_14.php">Programme formulaire 4</a> </h1>
-        <p>Dans la perspective de création d’un site d’agence immobilière, créez un formulaire comprenant trois boutons Submit
-            nommés Vendre, Acheter et Louer. En fonction du choix effectué par le visiteur, redirigez-le vers une page spécialisée dont le contenu
+        <p>Dans la perspective de création d’un site d’agence immobilière, créez un formulaire comprenant trois boutons
+            Submit
+            nommés Vendre, Acheter et Louer. En fonction du choix effectué par le visiteur, redirigez-le vers une page
+            spécialisée dont le contenu
             réponde au critère choisi.
         </p>
 
@@ -186,7 +230,7 @@
 
     <!-- Footer Section -->
     <div class="footer">
-        
+
         <p>&copy; 2026 My Project. All rights reserved.</p>
 
     </div>
