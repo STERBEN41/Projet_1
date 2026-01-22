@@ -39,8 +39,6 @@
                 <li><a class="dropdown-item" href="Exercice_10.php">Programme Fin d'année</a></li>
                 <li><a class="dropdown-item" href="Exercice_11.php">Programme de Formulaire</a></li>
                 <li><a class="dropdown-item" href="Exercice_12.php">Programme de Formulaire 2</a></li>
-                <li><a class="dropdown-item" href="Exercice_13.php">Programme de Formulaire 3</a></li>
-                <li><a class="dropdown-item" href="Exercice_14.php">Programme de Formulaire 4</a></li>
             </ul>
         </li>
     </ul>
@@ -55,9 +53,9 @@
             deux nombres.
         </p>
         <form method="post" action="">
-            <label for="">Entrer le premier nombre</label>
+            <label>Entrer le premier nombre</label>
             <input type="number" name="num1" required>
-            <label for="">Saisir le deuxieme nombre</label>
+            <label>Saisir le deuxieme nombre</label>
             <input type="number" name="num2" required>
             <button type="submit">Soumettre</button>
         </form>

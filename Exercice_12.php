@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css"> 
-    <title>PANLIDROME</title>
+    <title>Programme formulaire 2</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -39,8 +39,6 @@
                 <li><a class="dropdown-item" href="Exercice_10.php">Programme Fin d'année</a></li>
                 <li><a class="dropdown-item" href="Exercice_11.php">Programme de Formulaire</a></li>
                 <li><a class="dropdown-item" href="Exercice_12.php">Programme de Formulaire 2</a></li>
-                <li><a class="dropdown-item" href="Exercice_13.php">Programme de Formulaire 3</a></li>
-                <li><a class="dropdown-item" href="Exercice_14.php">Programme de Formulaire 4</a></li>
             </ul>
         </li>
     </ul>
@@ -49,7 +47,33 @@
     <!-- Main Content Section -->
     <div class="main-content">
 
-        <h1></h1>
+        <h1>Programme formulaire 2</h1>
+        <p>Ici vous avez un formulaire demandant la saisie d’un prix HT et d’un taux de TVA. 
+            Le script affiche le montant de la TVA et le prix TTC dans deux zones de texte créées dynamiquement.
+            Le formulaire maintient les données saisies.
+        </p>
+        <form method="post" action="">
+            <label class="form-label"> Saisir le prix HT</label>
+            <input type="number" name="prixHt" required>
+            <label class="form-label"> Saisir le taux de TVA</label>
+            <input type="number" name="tva" required>
+            <button type="submit">soumettre</button>
+        </form>
+        
+        <?php 
+        if (isset($_POST['prixHt']) && isset($_POST['tva'])){
+            $prixHt = $_POST['prixHt'];
+            $tva = $_POST['tva'];
+            if ($prixHt <= 0 || $tva <= 0){
+                echo"Saisie invalide. Veuillez entrer un montant HT et un taux de TVA valide." ;
+            }
+            else{
+                $montantTva = $prixHt * ($tva / 100);
+                $prixTtc = $prixHt + $montantTva ;
+            }
+        }
+        ?>
+        <p> Le montant TVA est de : <?php echo $montantTva ?> et le prix TTC est de : <?php echo $prixTtc ?> </p>
     </div>
 
     <!-- Footer Section -->

@@ -49,25 +49,25 @@ div.page1{
     padding: 20px;
 }
 
-div.page1, div.page2, div.page3, div.page4, div.page5, div.page6, div.page7, div.page8, div.page9, div.page10, div.page11, div.page12, div.page13, div.page14 {
+div.page1, div.page2, div.page3, div.page4, div.page5, div.page6, div.page7, div.page8, div.page9, div.page10, div.page11, div.page12 {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #e2e2e2;
 }
 
-div.page1 a, div.page2 a, div.page3 a, div.page4 a, div.page5 a, div.page6 a, div.page7 a, div.page8 a, div.page9 a, div.page10 a, div.page11 a, div.page12 a, div.page13 a, div.page14 a {
+div.page1 a, div.page2 a, div.page3 a, div.page4 a, div.page5 a, div.page6 a, div.page7 a, div.page8 a, div.page9 a, div.page10 a, div.page11 a, div.page12 a {
     text-decoration: none;
     color: #ff9900;
     font-weight: bold;
 }
 
-div.page1 h2, div.page2 h2, div.page3 h2, div.page4 h2, div.page5 h2, div.page6 h2, div.page7 h2, div.page8 h2, div.page9 h2, div.page10 h2, div.page11 h2, div.page12 h2, div.page13 h2, div.page14 h2 {
+div.page1 h2, div.page2 h2, div.page3 h2, div.page4 h2, div.page5 h2, div.page6 h2, div.page7 h2, div.page8 h2, div.page9 h2, div.page10 h2, div.page11 h2, div.page12 h2 {
     color: #08164a;
     
 }
 
-div.page1 p, div.page2 p, div.page3 p, div.page4 p, div.page5 p, div.page6 p, div.page7 p, div.page8 p, div.page9 p, div.page10 p, div.page11 p, div.page12 p, div.page13 p, div.page14 p, div.page15 p {
+div.page1 p, div.page2 p, div.page3 p, div.page4 p, div.page5 p, div.page6 p, div.page7 p, div.page8 p, div.page9 p, div.page10 p, div.page11 p, div.page12 p, div.page13 p {
     font-size: 18px;
     line-height: 1.5;
     color: #333;
@@ -76,13 +76,14 @@ div.page1 p, div.page2 p, div.page3 p, div.page4 p, div.page5 p, div.page6 p, di
 
 /******* Footer *******/
 div.footer {
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 20vh; 
+    height: 15vh; 
     font-family: Arial, sans-serif;
     margin-top: 20px;
-    padding: 20vh;
+    padding: 10vh;
     background-color: #08164a;
     border: solid #333;
     text-align: center;
