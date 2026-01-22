@@ -46,6 +46,12 @@
     </ul>
     </div>
 
+    <!-- Main Content Section -->
+    <div class="main-content">
+
+        <h1></h1>
+    </div>
+
     <!-- Footer Section -->
     <div class="footer">
         

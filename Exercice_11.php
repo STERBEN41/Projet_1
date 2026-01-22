@@ -71,59 +71,68 @@
             </fieldset>
         </form> -->
         
-        <form action="traitement.php" method="post">
-        <div class="mb-3">
-            <label for="nom" class="form-label">Nom</label>
-            <input type="text" class="form-control" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-            <label for="prenom" class="form-label">Prenom</label>
-            <input type="text" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="adresse" class="form-label">Adresse</label>
-            <input type="text" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="ville" class="form-label">Ville</label>
-            <input type="text" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="code_postal" class="form-label">Code Postal</label>
-            <input type="text" class="form-control" required>
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Soumettre</button>
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label">Nom</label>
+                <input type="text" name="nom" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Prenom</label>
+                <input type="text" name="prenom" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Adresse</label>
+                <input type="text" name="adresse" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Ville</label>
+                <input type="text" name="ville" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Code Postal</label>
+                <input type="text" name="code_postal" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary" >Soumettre</button>
         </form>
+        <br> <br>
         <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $nom = htmlspecialchars($_POST['nom']); // Sécurisation des données
-            $prenom = htmlspecialchars($_POST['prenom']);
-            $adresse = htmlspecialchars($_POST['adresse']);
-            $ville = htmlspecialchars($_POST['ville']);
-            $code_postal = htmlspecialchars($_POST['code_postal']); 
-            echo "<h2>Données soumises :</h2>";
-            echo "<table border='1'>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Adresse</th>
-                        <th>Ville</th>
-                        <th>Code Postal</th>
-                    </tr>
-                    <tr>
-                        <td>$nom</td>
-                        <td>$prenom</td>
-                        <td>$adresse</td>
-                        <td>$ville</td>
-                        <td>$code_postal</td>
-                    </tr>
-                  </table>";
-        }
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $nom = htmlspecialchars($_POST['nom']); // Sécurisation des données
+                $prenom = htmlspecialchars($_POST['prenom']);
+                $adresse = htmlspecialchars($_POST['adresse']);
+                $ville = htmlspecialchars($_POST['ville']);
+                $code_postal = htmlspecialchars($_POST['code_postal']);   
+            }
         ?>
+
+        <?php if(!empty($_POST)) { ?>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Ville</th>
+                    <th scope="col">Code Postal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th> <?= $nom ?> </th>
+                    <th> <?= $prenom ?> </th>
+                    <th> <?= $adresse ?> </th>
+                    <th> <?= $ville ?> </th>
+                    <th> <?= $code_postal ?> </th>
+                </tr>
+            </tbody>
+        </table> 
+        <?php } ?>
+
     </div>
 
     <!-- Footer Section -->
