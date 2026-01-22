@@ -16,7 +16,7 @@
 
     <!-- Header Section -->
     <div class="header">
-      <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs">
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
         </li>
@@ -45,6 +45,42 @@
         </li>
     </ul>
     </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+
+        <h1>Programme Fin d'année</h1>
+        <p>Un programme qui détermine le nombre de jours restant avant la fin d'année à partir d'une date donné 
+            par un utilisateur. Saisissez donc une date au format JJ/MM/AAAA.
+        </p>
+        <form method="post" action="Exercice_10.php">
+            <label for="date_input">Date (JJ/MM/AAAA):</label>
+            <input type="text" name="date_input" required>
+            <input type="submit" value="Calculer">
+        </form>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") { //
+            $date_input = $_POST['date_input'];
+            $date_parts = explode('/', $date_input); // Diviser la date en jour, mois, année
+            if (count($date_parts) == 3) {
+                $day = (int)$date_parts[0];
+                $month = (int)$date_parts[1];
+                $year = (int)$date_parts[2];
+                // Vérifier si la date est valide
+                if (checkdate($month, $day, $year)) {
+                    $input_date = DateTime::createFromFormat('d/m/Y', $date_input);
+                    $end_of_year = new DateTime("$year-12-31");
+                    $interval = $input_date->diff($end_of_year);
+                    echo "<p>Il reste " . $interval->days . " jours avant la fin de l'année $year.</p>";
+                } else {
+                    echo "<p>Date invalide. Veuillez entrer une date valide au format JJ/MM/AAAA.</p>";
+                }
+            } else {
+                echo "<p>Format de date incorrect. Veuillez utiliser le format JJ/MM/AAAA.</p>";
+            }
+        }
+        ?>
+        
     <!-- Footer Section -->
     <div class="footer">
         
