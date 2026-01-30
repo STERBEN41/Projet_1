@@ -64,20 +64,39 @@
         <?php 
         
         if (isset($_POST['num'])){
-            if($num <= 0){
-                echo "Veuillez saisir un nombre entier positif." ;
-            }
             $num = $_POST['num'] ;
-            ?>
-        <div class="alert alert-success mt-4">
-            <strong>Les Diviseurs de <?= $num ?> sont :  </strong>
-        </div>
-        <?php 
-            for($i = 0; $i <= $num; $i++){
+            if($num <= 0){
+                echo "<div class='alert alert-danger'>Veuillez saisir un nombre entier positif.</div>";
+        } else {
+            $diviseurs = [] ; 
+            for($i = 1; $i <= $num; $i++){
                 if($num % $i == 0){
-                    echo $i ;
+                    $diviseurs[] = $i ;
                 }
-            }
+            } ?>
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">
+                    Résultat
+                </div>
+                <div class="card-body">
+                    <p>
+                        <strong>Les diviseurs de <?= $num ?> sont :</strong>
+                    </p>
+
+                    <ul class="list-group list-group-flush mb-3">
+                        <?php foreach ($diviseurs as $d) { ?>
+                            <li class="list-group-item"><?= $d ?></li>
+                        <?php } ?>
+                    </ul>
+
+                    <span class="badge bg-primary">
+                        Nombre total de diviseurs : <?= count($diviseurs) ?>
+                    </span>
+                </div>
+            </div>
+
+        <?php
+        }
         }
         
         ?>
