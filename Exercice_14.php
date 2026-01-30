@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css"> 
-    <title>Programme Tableau multidimensionnel</title>
+    <title>LES DIVISUERS</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -45,69 +45,44 @@
         </li>
     </ul>
     </div>
-
+    
     <!-- Main Content Section -->
     <div class="main-content"> 
 
-        <h1>Programme Tableau multidimensionnel</h1>
-        <p>Écrivez un tableau multidimensionnel associatif dont les clés sont des noms de personne et les valeurs
-            des tableaux associatifs dont les clés sont le prénom, la ville de résidence et l’âge de la personne avec
-            une série de valeurs associées.
+        <h1>Programme diviseurs</h1>
+        <p>Ici vous trouverez un programme qui affiche 
+            l’ensemble des diviseurs d’un nombre saisi au clavier.
         </p>
-        <?php
-        $personnes = [
-            "Alice" => [
-                "prenom" => "Dupont",
-                "ville" => "Paris",
-                "age" => 25
-            ],
-            "Bob" => [
-                "prenom" => "Martin",
-                "ville" => "Lyon",
-                "age" => 30
-            ],
-            "Charlie" => [
-                "prenom" => "Durand",
-                "ville" => "Marseille",
-                "age" => 35
-            ]
-        ];
 
-        //  $person = array(
-        //     "Personnes" => array(
-        //         "Noms" => array("Alice", "Bob", "Charlie"),
-        //         "Prenom" => array("Dupont", "Martin", "Durand"),
-        //         "Ville" => array("Paris", "Lyon", "Marseille"),
-        //         "Age" => array(25, 30, 35)
-        //     ),
-        //  );
-
-        //  var_dump($person['Personnes']["Noms"][2]);
-        //  var_dump($person['Personnes']["Prenom"][1]);
-
+        <form method="post" class="card p-4 shadow-sm">
+            <div>
+                <label class="form-label">Saisir un nombre</label>
+                <input type="number" name="num" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">soumettre</button>
+        </form>
+        <?php 
+        
+        if (isset($_POST['num'])){
+            if($num <= 0){
+                echo "Veuillez saisir un nombre entier positif." ;
+            }
+            $num = $_POST['num'] ;
+            ?>
+        <div class="alert alert-success mt-4">
+            <strong>Les Diviseurs de <?= $num ?> sont :  </strong>
+        </div>
+        <?php 
+            for($i = 0; $i <= $num; $i++){
+                if($num % $i == 0){
+                    echo $i ;
+                }
+            }
+        }
+        
         ?>
 
-        <table class="table table-primary">
-            <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Ville</th>
-                    <th>Âge</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($personnes as $nom => $infos) { ?>
-                    <tr>
-                        <td><?= $nom ?></td>
-                        <td><?= $infos['prenom'] ?></td>
-                        <td><?= $infos['ville'] ?></td>
-                        <td><?= $infos['age'] ?></td>
-                    </tr>
-                <?php } ?>
-            </tbody>
-        </table>
-
+    </div>
 
     <!-- Footer Section -->
     <div class="footer">

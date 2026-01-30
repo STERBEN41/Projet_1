@@ -39,6 +39,8 @@
                 <li><a class="dropdown-item" href="Exercice_10.php">Programme Fin d'année</a></li>
                 <li><a class="dropdown-item" href="Exercice_11.php">Programme de Formulaire</a></li>
                 <li><a class="dropdown-item" href="Exercice_12.php">Programme de Formulaire 2</a></li>
+                <li><a class="dropdown-item" href="Exercice_13.php">Programme de Sinus </a></li>
+                <li><a class="dropdown-item" href="Exercice_14.php">Programme de Diviseur d'un entier </a></li>
             </ul>
         </li>
     </ul>
