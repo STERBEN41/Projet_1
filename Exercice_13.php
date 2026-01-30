@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css"> 
-    <title>Programme formulaire 2</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    <title>SINUS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -39,45 +39,75 @@
                 <li><a class="dropdown-item" href="Exercice_10.php">Programme Fin d'année</a></li>
                 <li><a class="dropdown-item" href="Exercice_11.php">Programme de Formulaire</a></li>
                 <li><a class="dropdown-item" href="Exercice_12.php">Programme de Formulaire 2</a></li>
-                <li><a class="dropdown-item" href="Exercice_13.php">Programme de Sinus </a></li>
             </ul>
         </li>
     </ul>
     </div>
 
-    <!-- Main Content Section -->
     <div class="main-content">
 
-        <h1>Programme formulaire 2</h1>
-        <p>Ici vous avez un formulaire demandant la saisie d’un prix HT et d’un taux de TVA. 
-            Le script affiche le montant de la TVA et le prix TTC dans deux zones de texte créées dynamiquement.
-            Le formulaire maintient les données saisies.
-        </p>
-        <form method="post" action="">
-            <label class="form-label"> Saisir le prix HT</label>
-            <input type="number" name="prixHt" required>
-            <label class="form-label"> Saisir le taux de TVA</label>
-            <input type="number" name="tva" required>
-            <button type="submit">soumettre</button>
-        </form>
-        
-        <?php 
-        if (isset($_POST['prixHt']) && isset($_POST['tva'])){
-            $prixHt = $_POST['prixHt'];
-            $tva = $_POST['tva'];
-            if ($prixHt <= 0 || $tva <= 0){
-                echo"Saisie invalide. Veuillez entrer un montant HT et un taux de TVA valide." ;
-            }
-            else{
-                $montantTva = $prixHt * ($tva / 100);
-                $prixTtc = $prixHt + $montantTva ;
-            }
-        }
-        ?>
-        <p> Le montant TVA est de : <?php echo $montantTva ?> et le prix TTC est de : <?php echo $prixTtc ?> </p>
+    <h1>Programme Sinus</h1>
+    <p>
+        À partir de la fonction sinus de PHP, écrivez une fonction qui donne le sinus d’un angle donné en radian, en degré ou en grade. 
+        Les paramètres sont la mesure de l’angle, et l’unité est symbolisée par une lettre. 
+        Le deuxième paramètre doit avoir une valeur par défaut correspondant aux radians.
+    </p>
+
+    <form method="post" class="card p-4 shadow-sm">
+    <div class="mb-3">
+        <label class="form-label">Valeur de l’angle</label>
+        <input type="number" step="any" name="angle" class="form-control" required>
     </div>
 
-    <!-- Footer Section -->
+    <div class="mb-3">
+        <label class="form-label">Unité de l’angle</label>
+        <select name="unite" class="form-select">
+            <option value="r">Radian</option>
+            <option value="d">Degré</option>
+            <option value="g">Grade</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Calculer</button>
+    </form>
+    
+    <?php 
+        if (isset($_POST['angle'], $_POST['unite'])) {
+            $angle = floatval($_POST['angle']);
+            $unite = $_POST['unite'];
+
+            $resultat = sinusAngle($angle, $unite);
+        }
+        function sinusAngle($angle, $unite = 'r')
+        {
+            switch ($unite) {
+                case 'd': 
+                    $angle = deg2rad($angle);
+                    break;
+
+                case 'g': 
+                    $angle = $angle * pi() / 200;
+                    break;
+
+                case 'r': 
+                default:
+
+                    break;
+            }
+
+            return sin($angle);
+        }
+
+        if (isset($resultat)) { ?>
+        <div class="alert alert-success mt-4">
+            <strong>Résultat :</strong> sin(<?= htmlspecialchars($angle) ?>) = <?= $resultat ?>
+        </div>
+        <?php } 
+    ?>
+
+    </div>
+
+     <!-- Footer Section -->
     <div class="footer">
         
         <p>&copy; 2026 My Project. All rights reserved.</p>

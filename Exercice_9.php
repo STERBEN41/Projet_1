@@ -39,6 +39,7 @@
                 <li><a class="dropdown-item" href="Exercice_10.php">Programme Fin d'année</a></li>
                 <li><a class="dropdown-item" href="Exercice_11.php">Programme de Formulaire</a></li>
                 <li><a class="dropdown-item" href="Exercice_12.php">Programme de Formulaire 2</a></li>
+                <li><a class="dropdown-item" href="Exercice_13.php">Programme de Sinus </a></li>
             </ul>
         </li>
     </ul>
@@ -53,14 +54,32 @@
             une série de valeurs associées.
         </p>
         <?php
-         $person = array(
-            "Personnes" => array(
-                "Noms" => array("Alice", "Bob", "Charlie"),
-                "Prenom" => array("Dupont", "Martin", "Durand"),
-                "Ville" => array("Paris", "Lyon", "Marseille"),
-                "Age" => array(25, 30, 35)
-            ),
-         );
+        $personnes = [
+            "Alice" => [
+                "prenom" => "Dupont",
+                "ville" => "Paris",
+                "age" => 25
+            ],
+            "Bob" => [
+                "prenom" => "Martin",
+                "ville" => "Lyon",
+                "age" => 30
+            ],
+            "Charlie" => [
+                "prenom" => "Durand",
+                "ville" => "Marseille",
+                "age" => 35
+            ]
+        ];
+
+        //  $person = array(
+        //     "Personnes" => array(
+        //         "Noms" => array("Alice", "Bob", "Charlie"),
+        //         "Prenom" => array("Dupont", "Martin", "Durand"),
+        //         "Ville" => array("Paris", "Lyon", "Marseille"),
+        //         "Age" => array(25, 30, 35)
+        //     ),
+        //  );
 
         //  var_dump($person['Personnes']["Noms"][2]);
         //  var_dump($person['Personnes']["Prenom"][1]);
@@ -68,19 +87,26 @@
         ?>
 
         <table class="table table-primary">
-            <td  scope="col">Noms</td>
-            <td  scope="col">Prenom</td>
-            <td  scope="col">Ville</td>
-            <td  scope="col">Age</td>
-            <?php for ($i = 0; $i < count($person['Personnes']["Noms"]); $i++) { ?>
+            <thead>
                 <tr>
-                    <td scope="row"><?= $person['Personnes']["Noms"][$i]; ?></td>
-                    <td scope="row"><?= $person['Personnes']["Prenom"][$i]; ?></td>
-                    <td scope="row"><?= $person['Personnes']["Ville"][$i]; ?></td>
-                    <td scope="row"><?= $person['Personnes']["Age"][$i]; ?></td>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Ville</th>
+                    <th>Âge</th>
                 </tr>
-            <?php } ?>
+            </thead>
+            <tbody>
+                <?php foreach ($personnes as $nom => $infos) { ?>
+                    <tr>
+                        <td><?= $nom ?></td>
+                        <td><?= $infos['prenom'] ?></td>
+                        <td><?= $infos['ville'] ?></td>
+                        <td><?= $infos['age'] ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
         </table>
+
 
     <!-- Footer Section -->
     <div class="footer">
